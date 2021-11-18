@@ -38,8 +38,6 @@ document.querySelector("#skip").addEventListener("click", function() {
 	video.currentTime += 15;
 	if(video.currentTime >= video.duration){
 		video.currentTime = 0;
-		video.load();
-		video.play();
 	}
 	console.log(video.currentTime);
 });
