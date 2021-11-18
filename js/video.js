@@ -2,7 +2,7 @@ var video = document.querySelector("#player1");
 //loads the video
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
-
+	document.querySelector("#volume").innerHTML = "100%";
 });
 //play the video
 document.querySelector("#play").addEventListener("click", function() {
@@ -34,11 +34,13 @@ document.querySelector("#faster").addEventListener("click", function() {
 
 //skip ahead
 document.querySelector("#skip").addEventListener("click", function() {
-	video.currentTime = video.currentTime + 15;
-	if(currentTime >= video.duration){
+	video.currentTime += 15;
+	if(video.currentTime >= video.duration){
 		video.currentTime = 0;
+		video.load();
+		video.play();
 	}
-		console.log(video.currentTime);
+	console.log(video.currentTime);
 });
 
 //mute
