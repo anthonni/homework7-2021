@@ -1,5 +1,5 @@
 var video = document.querySelector("#player1");
-document.querySelector("#volume").innerHTML = "100%";
+
 //loads the video
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
@@ -8,6 +8,7 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
+	document.querySelector("#volume").innerHTML = "100%";
 });
 
 //pause the video
